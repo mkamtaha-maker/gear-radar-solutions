@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Radar Digital Solutions | AI-Powered Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: -0.5px;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: #fff;
+            padding: 0.6rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+
+        .hero {
+            padding: 5rem 8% 3rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .services-section {
+            padding: 2rem 8% 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.6rem;
+            color: #fff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-tag {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .contact-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            max-width: 680px;
+            margin: 0 auto 5rem;
+            padding: 2.5rem;
+            border-radius: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: #0f172a;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+            font-size: 0.95rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        #responseMsg {
+            margin-top: 1.2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">⚡ Gear Radar</div>
+        <a href="#contact" class="cta-btn">Get Started</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Autonomous Digital Solutions for Local Businesses</h1>
+            <p>Rapid deployment of high-converting websites, digital QR systems, automated bots, and targeted local marketing solutions.</p>
+        </section>
+
+        <section class="services-section">
+            <h2 class="section-title">Our Digital Solutions</h2>
+            <div class="grid">
+                
+                <!-- Service 1 -->
+                <div class="card">
+                    <div>
+                        <h3>One-Page Web Launch</h3>
+                        <p>High-conversion responsive landing page with sticky WhatsApp booking, SEO meta-tags, and fast hosting.</p>
+                    </div>
+                    <div>
+                        <div class="price-tag">£30</div>
+                        <a href="#contact" class="cta-btn" style="display: block; text-align: center;" onclick="setService('web_launch')">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card">
+                    <div>
+                        <h3>Smart QR Digital Menu</h3>
+                        <p>Interactive mobile catalog with high-resolution QR codes ready for dining, retail, and storefront display.</p>
+                    </div>
+                    <div>
+                        <div class="price-tag">£25</div>
+                        <a href="#contact" class="cta-btn" style="display: block; text-align: center;" onclick="setService('qr_menu')">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card">
+                    <div>
+                        <h3>Local SEO & Presence Audit</h3>
+                        <p>Comprehensive audit analyzing local search rank, Google Business profile readiness, and speed factors.</p>
+                    </div>
+                    <div>
+                        <div class="price-tag">£20</div>
+                        <a href="#contact" class="cta-btn" style="display: block; text-align: center;" onclick="setService('seo_audit')">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="card">
+                    <div>
+                        <h3>30-Day Social Media Pack</h3>
+                        <p>Industry-tailored monthly content strategy, post prompts, caption templates, and targeted hashtag sets.</p>
+                    </div>
+                    <div>
+                        <div class="price-tag">£30</div>
+                        <a href="#contact" class="cta-btn" style="display: block; text-align: center;" onclick="setService('social_pack')">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="card">
+                    <div>
+                        <h3>Google Reviews Response Kit</h3>
+                        <p>Custom reputation toolkit with professional AI response formulas for positive and critical customer feedback.</p>
+                    </div>
+                    <div>
+                        <div class="price-tag">£15</div>
+                        <a href="#contact" class="cta-btn" style="display: block; text-align: center;" onclick="setService('reviews_kit')">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="card">
+                    <div>
+                        <h3>Custom WhatsApp Booking Bot</h3>
+                        <p>Automated business chat flow setup to qualify leads, answer FAQs, and confirm appointments 24/7.</p>
+                    </div>
+                    <div>
+                        <div class="price-tag">£45</div>
+                        <a href="#contact" class="cta-btn" style="display: block; text-align: center;" onclick="setService('whatsapp_bot')">Order Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-box" id="contact">
+            <h2 style="margin-bottom: 1.5rem; text-align: center;">Request a Project or Consultation</h2>
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="name" required placeholder="e.g. John Smith">
+                </div>
+                <div class="form-group">
+                    <label>Business Name</label>
+                    <input type="text" id="business_name" required placeholder="e.g. Smith Auto Care">
+                </div>
+                <div class="form-group">
+                    <label>Phone / WhatsApp</label>
+                    <input type="text" id="phone" required placeholder="+44 7123 456789">
+                </div>
+                <div class="form-group">
+                    <label>Country</label>
+                    <select id="country">
+                        <option value="UK">United Kingdom (GBP)</option>
+                        <option value="USA">United States (USD)</option>
+                        <option value="EU">European Union (EUR)</option>
+                        <option value="GCC">GCC / Saudi Arabia (SAR)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Desired Service</label>
+                    <select id="service_key">
+                        <option value="web_launch">One-Page Web Launch (£30)</option>
+                        <option value="qr_menu">Smart QR Digital Menu (£25)</option>
+                        <option value="seo_audit">Local SEO Audit (£20)</option>
+                        <option value="social_pack">30-Day Social Media Pack (£30)</option>
+                        <option value="reviews_kit">Google Reviews Response Kit (£15)</option>
+                        <option value="whatsapp_bot">Custom WhatsApp Booking Bot (£45)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Details / Notes</label>
+                    <textarea id="message" rows="3" required placeholder="Describe your business needs..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Request</button>
+            </form>
+            <div id="responseMsg"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gear Radar Digital Solutions. All rights reserved. | Consultant: Kam Tyler</p>
+    </footer>
+
+    <script>
+        const API_BASE = "https://gear-radar-agents-908695975875.europe-west1.run.app";
+
+        function setService(val) {
+            const select = document.getElementById('service_key');
+            if (select) select.value = val;
+        }
+
+        document.getElementById('inquiryForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const respBox = document.getElementById('responseMsg');
+
+            btn.disabled = true;
+            btn.innerText = "Processing with Agents...";
+            respBox.style.display = "none";
+
+            const payload = {
+                customer_name: document.getElementById('name').value,
+                business_name: document.getElementById('business_name').value,
+                phone: document.getElementById('phone').value,
+                country: document.getElementById('country').value,
+                service_key: document.getElementById('service_key').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const res = await fetch(`${API_BASE}/api/inquire`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+
+                if (res.ok) {
+                    respBox.style.display = "block";
+                    respBox.style.backgroundColor = "#064e3b";
+                    respBox.style.color = "#6ee7b7";
+                    respBox.innerHTML = `<strong>Request Received!</strong><br>${data.data.agent_response.replace(/\n/g, '<br>')}`;
+                    document.getElementById('inquiryForm').reset();
+                } else {
+                    throw new Error(data.detail || "Error connecting to service");
+                }
+            } catch (err) {
+                respBox.style.display = "block";
+                respBox.style.backgroundColor = "#7f1d1d";
+                respBox.style.color = "#fca5a5";
+                respBox.innerText = `Submission Error: ${err.message}`;
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Submit Request";
+            }
+        });
+    </script>
+</body>
+</html>
