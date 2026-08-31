@@ -308,9 +308,9 @@
       border-color: var(--primary);
     }
 
-    /* Contact Us */
+    /* Contact Us - Perfectly Aligned Responsive Grid */
     .contact-section {
-      max-width: 1050px;
+      max-width: 1080px;
       margin: 80px auto 40px;
       background: #0f172a;
       border: 1px solid #1e293b;
@@ -333,20 +333,20 @@
     }
 
     .channels-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
+      align-items: stretch;
     }
 
     .channel-box {
       background: #1e293b;
       padding: 24px 20px;
       border-radius: 14px;
-      width: 290px;
       border: 1px solid #334155;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
     }
@@ -355,42 +355,39 @@
       font-weight: 700;
       font-size: 1.1rem;
       margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .qr-frame {
       background: #ffffff;
       padding: 10px;
       border-radius: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 170px;
+      height: 170px;
     }
 
     .qr-frame img {
       display: block;
-      width: 130px;
-      height: 130px;
-    }
-
-    .email-icon-box {
-      width: 130px;
-      height: 130px;
-      background: #0b0f19;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      margin-bottom: 18px;
-      border: 1px solid #334155;
+      width: 150px;
+      height: 150px;
     }
 
     .btn-channel {
       width: 100%;
-      padding: 11px 0;
+      padding: 12px 0;
       color: #ffffff;
       text-decoration: none;
       font-weight: 700;
+      font-size: 0.95rem;
       border-radius: 8px;
       transition: opacity 0.2s ease;
+      text-align: center;
     }
     .btn-channel:hover { opacity: 0.9; }
 
@@ -557,8 +554,8 @@
         <div class="channel-title" style="color: var(--accent-amber);">
           ✉️ Official Email
         </div>
-        <div class="email-icon-box">
-          📬
+        <div class="qr-frame">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto%3Akam%40gearradar.co.uk%3Fsubject%3DBusiness%2520Inquiry%2520-%2520Gear%2520Radar" alt="Official Email QR Code" />
         </div>
         <a href="mailto:kam@gearradar.co.uk" class="btn-channel btn-email">
           Email: kam@gearradar.co.uk
