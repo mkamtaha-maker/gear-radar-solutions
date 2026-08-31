@@ -32,5 +32,21 @@
 
         <a href="https://gearradar.co.uk" class="btn">Return to Homepage</a>
     </div>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+    const payerId = urlParams.get('PayerID');
+
+    if (token) {
+        fetch('https://api.gearradar.co.uk/api/paypal/capture', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: token, payer_id: payerId })
+        })
+        .then(res => res.json())
+        .then(data => console.log('Capture synced:', data))
+        .catch(err => console.log('Notice:', err));
+    }
+</script>
 </body>
 </html>
