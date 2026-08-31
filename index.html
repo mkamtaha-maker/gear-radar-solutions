@@ -23,6 +23,7 @@
       --primary-hover: #0369a1;
       --accent: #38bdf8;
       --accent-green: #22c55e;
+      --accent-amber: #f59e0b;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
     }
@@ -62,7 +63,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
     }
 
     .nav-links a {
@@ -159,9 +160,9 @@
       border-radius: 10px;
       font-weight: 700;
       text-decoration: none;
-      transition: background 0.2s;
+      transition: background 0.2s, border-color 0.2s;
     }
-    .btn-secondary-lg:hover { background: #334155; }
+    .btn-secondary-lg:hover { background: #334155; border-color: var(--accent); }
 
     /* About Section */
     .about-section {
@@ -248,11 +249,17 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-4px);
+      border-color: #374151;
     }
 
     .showcase-img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       background: #0f172a;
       display: flex;
       align-items: center;
@@ -279,17 +286,36 @@
     .showcase-desc {
       color: var(--text-muted);
       font-size: 0.95rem;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .btn-showcase {
+      display: block;
+      text-align: center;
+      background: #1e293b;
+      color: var(--accent);
+      border: 1px solid #334155;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-showcase:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
     }
 
     /* Contact Us */
     .contact-section {
-      max-width: 900px;
+      max-width: 1050px;
       margin: 80px auto 40px;
       background: #0f172a;
       border: 1px solid #1e293b;
       border-radius: 20px;
-      padding: 50px 30px;
+      padding: 50px 24px;
       text-align: center;
     }
 
@@ -310,14 +336,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 28px;
+      gap: 24px;
     }
 
     .channel-box {
       background: #1e293b;
-      padding: 24px;
+      padding: 24px 20px;
       border-radius: 14px;
-      width: 270px;
+      width: 290px;
       border: 1px solid #334155;
       display: flex;
       flex-direction: column;
@@ -340,8 +366,21 @@
 
     .qr-frame img {
       display: block;
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
+    }
+
+    .email-icon-box {
+      width: 130px;
+      height: 130px;
+      background: #0b0f19;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      margin-bottom: 18px;
+      border: 1px solid #334155;
     }
 
     .btn-channel {
@@ -357,6 +396,7 @@
 
     .btn-whatsapp { background: var(--accent-green); }
     .btn-telegram { background: #0284c7; }
+    .btn-email { background: #d97706; }
 
     footer {
       max-width: 1200px;
@@ -398,7 +438,7 @@
     <p>Gear Radar Digital Solutions delivers enterprise-grade web launches, intelligent automated qualification bots, and targeted local presence systems designed for modern UK businesses.</p>
     
     <div class="hero-actions">
-      <a href="services.html" class="btn-primary-lg">Explore Services & Fixed Prices</a>
+      <a href="services.html" class="btn-primary-lg">Explore Services & Solutions</a>
       <a href="#contact-us" class="btn-secondary-lg">Instant Consultation</a>
     </div>
   </section>
@@ -421,8 +461,8 @@
         <div class="stat-label">Autonomous Workflows</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">£15-£45</div>
-        <div class="stat-label">Transparent Fixed Rates</div>
+        <div class="stat-num">UK Wide</div>
+        <div class="stat-label">Local & Digital Presence</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">24/7</div>
@@ -448,7 +488,7 @@
             <h3 class="showcase-title">High-Converting One-Page Web Systems</h3>
             <p class="showcase-desc">Mobile-optimised landing architecture featuring direct WhatsApp lead integration, instant quote requests, and local SEO foundation.</p>
           </div>
-          <a href="services.html" class="btn-secondary-lg" style="text-align: center; display: block;">Learn More (£30)</a>
+          <a href="services.html" class="btn-showcase">Learn More & Details →</a>
         </div>
       </div>
 
@@ -460,7 +500,7 @@
             <h3 class="showcase-title">Autonomous 24/7 WhatsApp Qualification Bots</h3>
             <p class="showcase-desc">Custom-built conversational flows that qualify client requirements, calculate estimates, generate PDFs, and confirm appointments automatically.</p>
           </div>
-          <a href="services.html" class="btn-secondary-lg" style="text-align: center; display: block;">Learn More (£45)</a>
+          <a href="services.html" class="btn-showcase">Learn More & Details →</a>
         </div>
       </div>
 
@@ -472,7 +512,7 @@
             <h3 class="showcase-title">Contactless Smart QR Menus & Catalogues</h3>
             <p class="showcase-desc">Frictionless digital menus designed for instant mobile browsing with zero app installs required for hospitality & service venues.</p>
           </div>
-          <a href="services.html" class="btn-secondary-lg" style="text-align: center; display: block;">Learn More (£25)</a>
+          <a href="services.html" class="btn-showcase">Learn More & Details →</a>
         </div>
       </div>
 
@@ -481,15 +521,15 @@
 
   <!-- Contact Us Section -->
   <section id="contact-us" class="contact-section">
-    <h2>Connect With Our Team</h2>
-    <p>Scan with your mobile or click below to speak directly with our consultation system or reach out via official email.</p>
+    <h2>Contact Us & Connect With Our Team</h2>
+    <p>Choose your preferred channel below for instant direct communication, automated proposals, or official business inquiries.</p>
 
     <div class="channels-wrapper">
       
-      <!-- WhatsApp Card -->
+      <!-- 1. WhatsApp Card -->
       <div class="channel-box">
         <div class="channel-title" style="color: var(--accent-green);">
-          💬 WhatsApp Channel
+          💬 WhatsApp Direct
         </div>
         <div class="qr-frame">
           <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F447584754377%3Ftext%3DHi%2520Kam%2C%2520I%2520am%2520interested%2520in%2520Gear%2520Radar%2520Digital%2520Solutions" alt="WhatsApp Direct QR Code" />
@@ -499,7 +539,7 @@
         </a>
       </div>
 
-      <!-- Telegram Card -->
+      <!-- 2. Telegram Card -->
       <div class="channel-box">
         <div class="channel-title" style="color: var(--accent);">
           ✈️ Telegram Channel
@@ -512,13 +552,26 @@
         </a>
       </div>
 
+      <!-- 3. Official Email Card -->
+      <div class="channel-box">
+        <div class="channel-title" style="color: var(--accent-amber);">
+          ✉️ Official Email
+        </div>
+        <div class="email-icon-box">
+          📬
+        </div>
+        <a href="mailto:kam@gearradar.co.uk" class="btn-channel btn-email">
+          Email: kam@gearradar.co.uk
+        </a>
+      </div>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2026 Gear Radar Digital Solutions • Managed by Kam Tyler • United Kingdom</p>
-    <p style="margin-top: 8px;">Direct Official Contact: <a href="mailto:kam@gearradar.co.uk">kam@gearradar.co.uk</a></p>
+    <p style="margin-top: 8px;">Direct Inquiries: <a href="mailto:kam@gearradar.co.uk">kam@gearradar.co.uk</a></p>
   </footer>
 
 </body>
