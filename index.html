@@ -10,16 +10,17 @@
   <meta property="og:description" content="Expert-Led Web & Growth Systems for Modern Businesses Worldwide." />
   <meta property="og:url" content="https://gearradar.co.uk" />
 
+  <!-- Fonts Integration -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --bg-dark: #070a12;
       --bg-surface: #0e1526;
-      --card-bg: rgba(16, 24, 44, 0.7);
-      --card-border: rgba(56, 189, 248, 0.15);
+      --card-bg: rgba(16, 24, 44, 0.75);
+      --card-border: rgba(56, 189, 248, 0.18);
       --card-border-hover: rgba(56, 189, 248, 0.5);
       --primary: #0284c7;
       --primary-hover: #0ea5e9;
@@ -40,7 +41,7 @@
       line-height: 1.6;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.2) 0%, transparent 60%),
         radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
@@ -61,13 +62,13 @@
       border-radius: 16px;
     }
 
-    /* Header */
+    /* Sticky Navigation Header */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(16px);
-      background: rgba(7, 10, 18, 0.85);
+      background: rgba(7, 10, 18, 0.88);
       border-bottom: 1px solid var(--card-border);
     }
 
@@ -75,42 +76,44 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
+      padding: 14px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
       color: #fff;
     }
 
-    /* Logo Styling - High Visibility & Fully Rendered */
-    .brand-logo-img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-      background: transparent;
-      display: block;
-      filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.6));
+    /* Vector SVG Logo Styles */
+    .brand-svg-logo {
+      width: 46px;
+      height: 46px;
+      filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover .brand-svg-logo {
+      transform: scale(1.05);
     }
 
     .brand-text {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
 
     .brand-text span {
       color: var(--accent-cyan);
-      text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+      text-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 28px;
     }
 
     .nav-links a {
@@ -137,7 +140,7 @@
       gap: 8px;
       background: rgba(16, 185, 129, 0.1);
       border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 30px;
       font-size: 0.8rem;
       color: var(--accent-green);
@@ -156,23 +159,23 @@
     .btn-header {
       background: linear-gradient(135deg, var(--primary), var(--primary-hover));
       color: #fff;
-      padding: 8px 18px;
+      padding: 9px 20px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.88rem;
-      box-shadow: 0 0 12px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 0 14px rgba(2, 132, 199, 0.4);
       transition: all 0.2s;
     }
 
     .btn-header:hover {
-      box-shadow: 0 0 18px rgba(0, 240, 255, 0.6);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* Hero Section Architecture */
     .hero {
-      padding: 60px 0 40px;
+      padding: 90px 0 60px;
       text-align: center;
     }
 
@@ -182,98 +185,71 @@
       gap: 8px;
       background: rgba(56, 189, 248, 0.08);
       border: 1px solid rgba(56, 189, 248, 0.3);
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 20px;
       color: var(--accent);
       font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     .hero h1 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 3.1rem;
+      font-size: 3.3rem;
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, #ffffff 40%, var(--accent-cyan) 100%);
+      margin-bottom: 22px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero p {
       color: var(--text-muted);
-      font-size: 1.15rem;
-      max-width: 740px;
-      margin: 0 auto 32px;
-    }
-
-    /* Hero Center Visual */
-    .hero-main-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      border: 2px solid var(--card-border);
-      box-shadow: 0 0 35px rgba(0, 240, 255, 0.25);
+      font-size: 1.18rem;
+      max-width: 760px;
       margin: 0 auto 36px;
-      display: block;
     }
 
     .hero-buttons {
       display: flex;
       justify-content: center;
       gap: 16px;
-      flex-wrap: wrap;
     }
 
-    .btn-primary {
+    .btn-primary-lg {
       background: linear-gradient(135deg, var(--primary), #00b4d8);
       color: #fff;
-      padding: 14px 28px;
-      border-radius: 10px;
+      padding: 16px 36px;
+      border-radius: 12px;
       font-weight: 700;
+      font-size: 1rem;
       text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0, 180, 216, 0.3);
-      transition: all 0.2s;
+      box-shadow: 0 4px 24px rgba(0, 180, 216, 0.35);
+      transition: all 0.25s ease;
     }
 
-    .btn-primary:hover {
+    .btn-primary-lg:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0, 240, 255, 0.5);
+      box-shadow: 0 6px 30px rgba(0, 240, 255, 0.55);
     }
 
-    .btn-secondary {
-      background: rgba(30, 41, 59, 0.8);
-      color: #fff;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--accent-cyan);
-      background: #1e293b;
-    }
-
-    /* Stats Grid */
+    /* Performance Indicators Bar */
     .stats-bar {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin: 45px 0 60px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 50px 0 70px;
     }
 
     .stat-item {
-      padding: 20px;
+      padding: 24px;
       text-align: center;
     }
 
     .stat-val {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 800;
       color: var(--accent-cyan);
       margin-bottom: 4px;
@@ -284,29 +260,29 @@
       font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
 
-    /* Section Head */
+    /* Section Headings */
     .section-head {
       text-align: center;
-      margin: 60px 0 36px;
+      margin: 70px 0 40px;
     }
 
     .section-head h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       font-weight: 800;
       color: #fff;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .section-head p {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
-    /* Contact Channels */
+    /* Contact Channels Grid */
     .channels-wrapper {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -317,36 +293,41 @@
     .channel-box {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      padding: 26px 20px;
+      padding: 30px 22px;
       border-radius: 16px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      transition: border-color 0.2s;
+    }
+
+    .channel-box:hover {
+      border-color: var(--card-border-hover);
     }
 
     .channel-title {
       font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 14px;
+      font-size: 1.15rem;
+      margin-bottom: 16px;
     }
 
     .qr-frame {
       background: #ffffff;
       padding: 8px;
       border-radius: 10px;
-      margin-bottom: 18px;
-      width: 150px;
-      height: 150px;
+      margin-bottom: 20px;
+      width: 155px;
+      height: 155px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .qr-frame img {
-      width: 134px;
-      height: 134px;
+      width: 138px;
+      height: 138px;
       display: block;
     }
 
@@ -357,7 +338,7 @@
       font-weight: 700;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       transition: opacity 0.2s;
     }
 
@@ -369,27 +350,42 @@
     /* Footer */
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 40px 0 20px;
+      padding: 40px 0 25px;
       text-align: center;
       color: var(--text-muted);
       font-size: 0.88rem;
-      margin-top: 60px;
+      margin-top: 70px;
     }
 
     footer a { color: var(--accent-cyan); text-decoration: none; }
 
     @media (max-width: 768px) {
       .nav-wrapper { flex-direction: column; gap: 14px; }
-      .hero h1 { font-size: 2.2rem; }
+      .hero h1 { font-size: 2.3rem; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Responsive Navigation Header -->
   <header>
     <div class="container nav-wrapper">
       <a href="index.html" class="brand">
-        <img src="image_1e49f3.png" alt="Gear Radar Logo" class="brand-logo-img" />
+        <!-- Embedded Pure Inline Vector SVG Logo -->
+        <svg class="brand-svg-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="44" stroke="url(#gear_radar_grad)" stroke-width="4" stroke-dasharray="10 4"/>
+          <path d="M50 8V18M50 82V92M8 50H18M82 50H92M20.3 20.3L27.4 27.4M72.6 72.6L79.7 79.7M20.3 79.7L27.4 72.6M72.6 27.4L79.7 20.3" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="28" stroke="#0284c7" stroke-width="3"/>
+          <circle cx="50" cy="50" r="16" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 3"/>
+          <circle cx="50" cy="50" r="6" fill="#00f0ff"/>
+          <line x1="50" y1="50" x2="70" y2="30" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="gear_radar_grad" x1="0" y1="0" x2="100" y2="100">
+              <stop offset="0%" stop-color="#00f0ff"/>
+              <stop offset="100%" stop-color="#0284c7"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <span class="brand-text">GEAR <span>RADAR</span></span>
       </a>
 
@@ -403,25 +399,24 @@
         <div class="status-badge">
           <span class="status-dot"></span> 24/7 ACTIVE
         </div>
-        <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services" class="btn-header">Instant Chat</a>
+        <a href="https://wa.me/447584754377?text=Hi%20Gear%20Radar%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services" class="btn-header">Instant Chat</a>
       </div>
     </div>
   </header>
 
+  <!-- Hero Section -->
   <main class="container">
     <section class="hero">
       <div class="hero-badge">⚡ Expert-Led Growth Architecture</div>
       <h1>Engineering Autonomous Digital Presence & Growth</h1>
       <p>Gear Radar Digital Solutions, led by an expert team, designs instant-launch web storefronts, personalized direct lead capture, and automated local visibility engines for modern businesses worldwide.</p>
-      
-      <img src="gearradar_dig.jfif" alt="Gear Radar Digital Strategy" class="hero-main-img" />
 
       <div class="hero-buttons">
-        <a href="services.html" class="btn-primary">View Fixed Services & Pricing →</a>
-        <a href="#contact" class="btn-secondary">Instant Consultation</a>
+        <a href="services.html" class="btn-primary-lg">View Fixed Services & Pricing →</a>
       </div>
     </section>
 
+    <!-- Operational KPI Bar -->
     <div class="stats-bar">
       <div class="glass-panel stat-item">
         <div class="stat-val">24-48h</div>
@@ -441,33 +436,37 @@
       </div>
     </div>
 
+    <!-- Direct Communication Channels -->
     <section id="contact">
       <div class="section-head">
-        <h2>Direct Connect & Instant Consultation</h2>
-        <p>Connect directly with our team across your preferred communication channel.</p>
+        <h2>Direct Connect & Official Channels</h2>
+        <p>Choose your preferred communication line to connect directly with our expert consultancy team.</p>
       </div>
 
       <div class="channels-wrapper">
+        <!-- WhatsApp Card -->
         <div class="channel-box">
           <div class="channel-title" style="color: var(--accent-green);">💬 WhatsApp Direct</div>
           <div class="qr-frame">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F447442309417%3Ftext%3DHi%2520Gear%2520Radar%2520Team%2C%2520I%2520am%2520interested%2520in%2520your%2520digital%2520solutions" alt="WhatsApp QR Code" />
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F447584754377%3Ftext%3DHi%2520Gear%2520Radar%2520Team%2C%2520I%2520am%2520interested%2520in%2520your%2520digital%2520solutions" alt="WhatsApp QR Code" />
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I%20am%20interested%20in%20your%20digital%20solutions" target="_blank" class="btn-channel btn-whatsapp">Open WhatsApp (+44 7442 309417)</a>
+          <a href="https://wa.me/447584754377?text=Hi%20Gear%20Radar%20Team,%20I%20am%20interested%20in%20your%20digital%20solutions" target="_blank" class="btn-channel btn-whatsapp">Open WhatsApp Direct</a>
         </div>
 
+        <!-- Telegram Card -->
         <div class="channel-box">
-          <div class="channel-title" style="color: var(--accent-cyan);">✈️ Telegram Bot</div>
+          <div class="channel-title" style="color: var(--accent-cyan);">✈️ Telegram Channel</div>
           <div class="qr-frame">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Ft.me%2FGearRadarAlerts_bot" alt="Telegram QR Code" />
           </div>
           <a href="https://t.me/GearRadarAlerts_bot" target="_blank" class="btn-channel btn-telegram">Open Telegram Bot</a>
         </div>
 
+        <!-- Official Email Card -->
         <div class="channel-box">
           <div class="channel-title" style="color: var(--accent-amber);">✉️ Official Email</div>
           <div class="qr-frame">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto%3Ainfo%40gearradar.co.uk%3Fsubject%3DBusiness%2520Inquiry%2520-%2520Gear%2520Radar" alt="Email QR Code" />
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto%3Ainfo%40gearradar.co.uk%3Fsubject%3DBusiness%2520Inquiry%2520-%2520Gear%2520Radar" alt="Official Email QR Code" />
           </div>
           <a href="mailto:info@gearradar.co.uk" class="btn-channel btn-email">info@gearradar.co.uk</a>
         </div>
@@ -475,10 +474,11 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2026 Gear Radar Digital Solutions • Greater Manchester, UK</p>
-      <p style="margin-top: 8px;">Direct Inquiries: <a href="mailto:info@gearradar.co.uk">info@gearradar.co.uk</a></p>
+      <p>© 2026 Gear Radar Digital Solutions • Managed by Kam Tyler • Greater Manchester, UK</p>
+      <p style="margin-top: 8px;">Official Direct Inquiries: <a href="mailto:info@gearradar.co.uk">info@gearradar.co.uk</a></p>
     </div>
   </footer>
 
