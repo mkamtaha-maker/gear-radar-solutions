@@ -10,7 +10,7 @@
   <meta property="og:description" content="Transparent fixed rates for modern digital setups and bespoke workflows." />
   <meta property="og:url" content="https://gearradar.co.uk/services.html" />
 
-  <!-- Fonts -->
+  <!-- Fonts Integration -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -62,7 +62,7 @@
       border-radius: 16px;
     }
 
-    /* Header Navigation */
+    /* Header Structure */
     header {
       position: sticky;
       top: 0;
@@ -92,10 +92,6 @@
       height: 46px;
       filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
       transition: transform 0.3s ease;
-    }
-
-    .brand:hover .brand-svg-logo {
-      transform: scale(1.05);
     }
 
     .brand-text {
@@ -150,7 +146,7 @@
       transform: translateY(-1px);
     }
 
-    /* Page Intro */
+    /* Page Head Intro */
     .page-head {
       text-align: center;
       padding: 60px 0 30px;
@@ -173,7 +169,7 @@
       margin: 0 auto;
     }
 
-    /* Currency Picker */
+    /* Currency Selector Component */
     .currency-picker {
       display: flex;
       justify-content: center;
@@ -201,7 +197,7 @@
       cursor: pointer;
     }
 
-    /* Services Grid */
+    /* Services Grid Architecture */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -300,7 +296,7 @@
       box-shadow: 0 0 14px rgba(2, 132, 199, 0.5);
     }
 
-    /* Bundle Box */
+    /* Bundle Box Component */
     .bundle-banner {
       background: linear-gradient(135deg, rgba(2, 132, 199, 0.2), rgba(139, 92, 246, 0.15));
       border: 1px solid rgba(56, 189, 248, 0.4);
@@ -383,19 +379,14 @@
     }
 
     footer a { color: var(--accent-cyan); text-decoration: none; }
-
-    @media (max-width: 768px) {
-      .nav-wrapper { flex-direction: column; gap: 14px; }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Header Navigation -->
+  <!-- Header Architecture -->
   <header>
     <div class="container nav-wrapper">
       <a href="index.html" class="brand">
-        <!-- Pure Inline Vector SVG Logo -->
         <svg class="brand-svg-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="44" stroke="url(#gear_radar_grad)" stroke-width="4" stroke-dasharray="10 4"/>
           <path d="M50 8V18M50 82V92M8 50H18M82 50H92M20.3 20.3L27.4 27.4M72.6 72.6L79.7 79.7M20.3 79.7L27.4 72.6M72.6 27.4L79.7 20.3" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round"/>
@@ -416,7 +407,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Services & Pricing</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact">Contact Us</a>
       </div>
 
       <div class="header-actions">
@@ -425,14 +416,14 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main Services Content -->
   <main class="container">
     <div class="page-head">
       <h1>Transparent Fixed Solutions</h1>
       <p>Instant-deployment services with clear, upfront pricing. No contracts, monthly retainers, or hidden fees.</p>
     </div>
 
-    <!-- Currency Picker -->
+    <!-- Currency Picker Component -->
     <div class="currency-picker">
       <label for="currencySelect">Select Your Region / Currency:</label>
       <select id="currencySelect" class="currency-select" onchange="updateCurrency(this.value)">
@@ -447,7 +438,7 @@
       </select>
     </div>
 
-    <!-- Services Grid -->
+    <!-- 6 Core Services Grid -->
     <div class="services-grid">
       <!-- Service 1 -->
       <div class="glass-panel service-card">
@@ -552,7 +543,7 @@
       </div>
     </div>
 
-    <!-- Bundle Offer -->
+    <!-- Local Starter Bundle Banner -->
     <div class="bundle-banner">
       <div class="bundle-content">
         <h3>⚡ Local Business Starter Bundle</h3>
