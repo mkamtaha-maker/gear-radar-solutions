@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services & Fixed Pricing | Gear Radar Digital Solutions</title>
   
+  <meta name="description" content="Transparent, fixed-price digital solutions, web launches, AI booking bots, and local growth systems worldwide by Kam Tyler." />
+  <meta property="og:title" content="Gear Radar Digital Solutions | Services & Pricing" />
+  <meta property="og:description" content="Transparent fixed rates for modern digital setups and autonomous workflows." />
+  <meta property="og:url" content="https://gearradar.co.uk/services.html" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,21 +37,24 @@
       padding: 0 16px 60px;
     }
 
+    /* Responsive Header */
     header {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 0;
+      padding: 18px 0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      gap: 16px;
       border-bottom: 1px solid var(--card-border);
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.35rem;
+      gap: 8px;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--text-main);
       text-decoration: none;
@@ -57,18 +65,25 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: color 0.2s;
     }
 
     .nav-links a:hover, .nav-links a.active { color: #fff; }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
     .status-badge {
       display: inline-flex;
@@ -76,11 +91,12 @@
       gap: 6px;
       background: rgba(34, 197, 94, 0.1);
       border: 1px solid rgba(34, 197, 94, 0.3);
-      padding: 5px 12px;
+      padding: 5px 10px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--accent-green);
       font-weight: 600;
+      white-space: nowrap;
     }
 
     .status-dot {
@@ -91,29 +107,57 @@
       box-shadow: 0 0 8px var(--accent-green);
     }
 
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 16px 0;
+      }
+      .nav-links {
+        justify-content: center;
+        gap: 14px;
+        width: 100%;
+      }
+      .header-right {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    /* Hero Section */
     .hero-services {
       max-width: 800px;
-      margin: 60px auto 40px;
+      margin: 50px auto 36px;
       text-align: center;
     }
 
     .hero-services h1 {
-      font-size: 2.8rem;
+      font-size: 2.3rem;
       font-weight: 800;
       color: #fff;
       margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      .hero-services h1 { font-size: 2.8rem; }
     }
 
     .hero-services p {
       color: var(--text-muted);
-      font-size: 1.15rem;
+      font-size: 1.1rem;
     }
 
+    /* Services Grid */
     .services-container {
       max-width: 1200px;
-      margin: 40px auto 60px;
+      margin: 30px auto 60px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
     }
 
@@ -121,7 +165,7 @@
       background-color: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 30px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -134,7 +178,7 @@
     }
 
     .service-title {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 12px;
       color: #fff;
@@ -163,26 +207,28 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.95rem;
       transition: background 0.2s ease;
     }
 
     .btn-card:hover { background-color: var(--primary-hover); }
 
+    /* Footer */
     footer {
       max-width: 1200px;
-      margin: 40px auto 0;
-      padding-top: 24px;
+      margin: 50px auto 0;
+      padding-top: 20px;
       border-top: 1px solid var(--card-border);
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
     }
     footer a { color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Responsive Navigation Header -->
   <header>
     <a href="index.html" class="brand">
       ⚡ Gear Radar <span>Digital</span>
@@ -194,25 +240,27 @@
       <a href="index.html#contact-us">Contact Us</a>
     </div>
 
-    <div class="status-badge">
-      <span class="status-dot"></span> we are avilable 24/7
+    <div class="header-right">
+      <div class="status-badge">
+        <span class="status-dot"></span> we are avilable 24/7
+      </div>
     </div>
   </header>
 
-  <!-- Hero Title -->
+  <!-- Hero Header -->
   <div class="hero-services">
     <h1>Specialized Fixed-Price Solutions</h1>
-    <p>Transparent pricing, rapid turnaround, and zero hidden retainer fees.</p>
+    <p>Transparent pricing, rapid 24-48h turnaround, and zero hidden retainer fees.</p>
   </div>
 
-  <!-- Services Grid -->
+  <!-- 6 Core Services Grid -->
   <main class="services-container">
     
     <!-- 1. Web Launch -->
     <div class="service-card">
       <div>
         <h3 class="service-title">One-Page Web Launch</h3>
-        <p class="service-desc">A high-converting, mobile-optimised landing page built to turn local visitors into paying customers. Fast hosting & WhatsApp lead integration included.</p>
+        <p class="service-desc">A high-converting, mobile-optimised landing page built to turn local and online visitors into paying customers. Fast hosting & WhatsApp lead integration included.</p>
       </div>
       <div>
         <div class="service-price">£30</div>
@@ -236,7 +284,7 @@
     <div class="service-card">
       <div>
         <h3 class="service-title">30-Day Social Media Pack</h3>
-        <p class="service-desc">Industry-tailored monthly content strategy, post prompts, high-engagement caption templates, and targeted local hashtags.</p>
+        <p class="service-desc">Industry-tailored monthly content strategy, post prompts, high-engagement caption templates, and targeted local & global hashtags.</p>
       </div>
       <div>
         <div class="service-price">£30</div>
@@ -248,7 +296,7 @@
     <div class="service-card">
       <div>
         <h3 class="service-title">Smart QR Digital Menu</h3>
-        <p class="service-desc">Interactive, contactless digital menu and product showcase designed for instant mobile browsing for hospitality & retail shops.</p>
+        <p class="service-desc">Interactive, contactless digital menu and product showcase designed for instant mobile browsing for hospitality & retail venues.</p>
       </div>
       <div>
         <div class="service-price">£25</div>
@@ -260,7 +308,7 @@
     <div class="service-card">
       <div>
         <h3 class="service-title">Local SEO & Presence Audit</h3>
-        <p class="service-desc">In-depth visibility analysis, Google Map profile optimisation, and search keyword strategy to outrank local competitors.</p>
+        <p class="service-desc">In-depth visibility analysis, Google Maps profile optimisation, and search keyword strategy to outrank competitors in your area.</p>
       </div>
       <div>
         <div class="service-price">£20</div>
@@ -284,7 +332,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2026 Gear Radar Digital Solutions • Managed by Kam Tyler • United Kingdom</p>
+    <p>© 2026 Gear Radar Digital Solutions • Managed by Kam Tyler • Worldwide Services</p>
     <p style="margin-top: 8px;">Direct Official Contact: <a href="mailto:kam@gearradar.co.uk">kam@gearradar.co.uk</a></p>
   </footer>
 
