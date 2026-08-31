@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gear Radar Digital Solutions | Autonomous Web & Growth Systems</title>
   
-  <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Autonomous web development, WhatsApp AI booking bots, and local growth systems for UK businesses by Kam Tyler." />
+  <meta name="description" content="Leading autonomous digital solutions, rapid web deployment, and intelligent automation systems for forward-thinking businesses across the UK." />
   <meta property="og:title" content="Gear Radar Digital Solutions" />
-  <meta property="og:description" content="High-converting digital setups & AI booking bots for local businesses." />
+  <meta property="og:description" content="Autonomous Web & AI Growth Systems for Modern Businesses." />
   <meta property="og:url" content="https://gearradar.co.uk" />
-  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +27,7 @@
       --text-muted: #94a3b8;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -43,7 +37,6 @@
       padding: 0 16px 60px;
     }
 
-    /* Header & Navigation */
     header {
       max-width: 1200px;
       margin: 0 auto;
@@ -64,9 +57,23 @@
       text-decoration: none;
     }
 
-    .brand span {
-      color: var(--accent);
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
 
     .status-badge {
       display: inline-flex;
@@ -74,9 +81,9 @@
       gap: 6px;
       background: rgba(34, 197, 94, 0.1);
       border: 1px solid rgba(34, 197, 94, 0.3);
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 20px;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--accent-green);
       font-weight: 600;
     }
@@ -100,22 +107,20 @@
       transition: background 0.2s ease;
     }
 
-    .btn-header:hover {
-      background-color: var(--primary-hover);
-    }
+    .btn-header:hover { background-color: var(--primary-hover); }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      max-width: 900px;
-      margin: 60px auto 40px;
+      max-width: 960px;
+      margin: 70px auto 50px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -123,109 +128,196 @@
 
     .hero p {
       color: var(--text-muted);
-      font-size: 1.15rem;
-      max-width: 650px;
-      margin: 0 auto;
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto 30px;
     }
 
-    /* Services Grid */
-    .services-container {
-      max-width: 1200px;
-      margin: 40px auto 60px;
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary-lg {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-primary-lg:hover { background: var(--primary-hover); }
+
+    .btn-secondary-lg {
+      background: #1e293b;
+      color: #fff;
+      border: 1px solid #334155;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary-lg:hover { background: #334155; }
+
+    /* About Section */
+    .about-section {
+      max-width: 1100px;
+      margin: 80px auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
+      gap: 40px;
+      align-items: center;
     }
 
-    .service-card {
-      background-color: var(--card-bg);
+    .about-text h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Showcase Examples */
+    .showcase-section {
+      max-width: 1200px;
+      margin: 80px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .showcase-card {
+      background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 30px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .showcase-img {
+      width: 100%;
+      height: 200px;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--card-border);
+      font-size: 3.5rem;
+    }
+
+    .showcase-body {
+      padding: 24px;
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: #374151;
-    }
-
-    .service-title {
-      font-size: 1.3rem;
+    .showcase-title {
+      font-size: 1.25rem;
       font-weight: 700;
-      margin-bottom: 12px;
       color: #fff;
-    }
-
-    .service-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 24px;
-      flex-grow: 1;
-    }
-
-    .service-price {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-
-    .btn-card {
-      display: block;
-      background-color: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 12px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
-
-    .btn-card:hover {
-      background-color: var(--primary-hover);
-    }
-
-    /* Direct Connect & QR Codes Section */
-    .direct-connect-section {
-      max-width: 850px;
-      margin: 0 auto 60px;
-      background: #0f172a;
-      border: 1px solid #1e293b;
-      border-radius: 16px;
-      padding: 40px 24px;
-      text-align: center;
-    }
-
-    .direct-connect-section h2 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--accent);
       margin-bottom: 8px;
     }
 
-    .direct-connect-section p {
+    .showcase-desc {
       color: var(--text-muted);
-      margin-bottom: 32px;
       font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    /* Contact Us */
+    .contact-section {
+      max-width: 900px;
+      margin: 80px auto 40px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 20px;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .contact-section p {
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      font-size: 1.05rem;
     }
 
     .channels-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 32px;
+      gap: 28px;
     }
 
     .channel-box {
       background: #1e293b;
       padding: 24px;
       border-radius: 14px;
-      width: 290px;
+      width: 270px;
       border: 1px solid #334155;
       display: flex;
       flex-direction: column;
@@ -237,22 +329,19 @@
       font-weight: 700;
       font-size: 1.1rem;
       margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .qr-frame {
       background: #ffffff;
       padding: 10px;
       border-radius: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .qr-frame img {
       display: block;
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
 
     .btn-channel {
@@ -264,159 +353,148 @@
       border-radius: 8px;
       transition: opacity 0.2s ease;
     }
+    .btn-channel:hover { opacity: 0.9; }
 
-    .btn-channel:hover {
-      opacity: 0.9;
-    }
+    .btn-whatsapp { background: var(--accent-green); }
+    .btn-telegram { background: #0284c7; }
 
-    .btn-whatsapp {
-      background: var(--accent-green);
-    }
-
-    .btn-telegram {
-      background: #0284c7;
-    }
-
-    /* Footer */
     footer {
       max-width: 1200px;
-      margin: 40px auto 0;
+      margin: 60px auto 0;
       padding-top: 24px;
       border-top: 1px solid var(--card-border);
       text-align: center;
       color: var(--text-muted);
       font-size: 0.88rem;
     }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
+    footer a { color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Header -->
+  <!-- Header -->
   <header>
-    <a href="#" class="brand">
+    <a href="index.html" class="brand">
       ⚡ Gear Radar <span>Digital</span>
     </a>
+    
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services & Pricing</a>
+      <a href="#contact-us">Contact Us</a>
+    </div>
+
     <div style="display: flex; align-items: center; gap: 16px;">
       <div class="status-badge">
-        <span class="status-dot"></span> Kam Tyler (AI Active 24/7)
+        <span class="status-dot"></span> we are avilable 24/7
       </div>
-      <a href="#direct-connect" class="btn-header">Get Started</a>
+      <a href="services.html" class="btn-header">View Solutions</a>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <h1>Autonomous Web & Local Growth Systems</h1>
-    <p>We deploy high-converting digital setups, automated booking bots, and local presence kits tailored for modern UK businesses.</p>
+    <h1>Engineering the Future of Autonomous Business Growth</h1>
+    <p>Gear Radar Digital Solutions delivers enterprise-grade web launches, intelligent automated qualification bots, and targeted local presence systems designed for modern UK businesses.</p>
+    
+    <div class="hero-actions">
+      <a href="services.html" class="btn-primary-lg">Explore Services & Fixed Prices</a>
+      <a href="#contact-us" class="btn-secondary-lg">Instant Consultation</a>
+    </div>
   </section>
 
-  <!-- 6 Specialized Services -->
-  <main class="services-container">
-    
-    <!-- 1. Web Launch -->
-    <div class="service-card">
-      <div>
-        <h3 class="service-title">One-Page Web Launch</h3>
-        <p class="service-desc">A high-converting, mobile-optimised landing page built to turn local visitors into paying customers. Fast hosting & WhatsApp lead integration included.</p>
-      </div>
-      <div>
-        <div class="service-price">£30</div>
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I'd%20like%20to%20order%20the%20One-Page%20Web%20Launch%20(%C2%A330)%20for%20my%20business." target="_blank" class="btn-card">Order via WhatsApp</a>
-      </div>
+  <!-- About Us Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>A Pioneering Standard in Digital Automation</h2>
+      <p>At <b>Gear Radar Digital Solutions</b>, we eliminate digital bottlenecks. We engineer lightning-fast digital storefronts and automated communication pipelines that qualify customers, answer inquiries, and dispatch instant quotations 24/7.</p>
+      <p>Whether you operate a local retail store, professional consultancy, or hospitality venue, our mission is to scale your operational reach with zero unnecessary overhead.</p>
     </div>
 
-    <!-- 2. WhatsApp Bot -->
-    <div class="service-card">
-      <div>
-        <h3 class="service-title">Custom WhatsApp Booking Bot</h3>
-        <p class="service-desc">Automated business chat flow setup to qualify leads, answer FAQs, and confirm customer appointments 24/7 without manual intervention.</p>
+    <div class="about-stats">
+      <div class="stat-card">
+        <div class="stat-num">24-48h</div>
+        <div class="stat-label">Rapid Deployment</div>
       </div>
-      <div>
-        <div class="service-price">£45</div>
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I'm%20interested%20in%20setting%20up%20a%20Custom%20WhatsApp%20Booking%20Bot%20(%C2%A345)." target="_blank" class="btn-card">Order via WhatsApp</a>
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Autonomous Workflows</div>
       </div>
-    </div>
-
-    <!-- 3. Social Media Pack -->
-    <div class="service-card">
-      <div>
-        <h3 class="service-title">30-Day Social Media Pack</h3>
-        <p class="service-desc">Industry-tailored monthly content strategy, post prompts, high-engagement caption templates, and targeted local hashtags.</p>
+      <div class="stat-card">
+        <div class="stat-num">£15-£45</div>
+        <div class="stat-label">Transparent Fixed Rates</div>
       </div>
-      <div>
-        <div class="service-price">£30</div>
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I'd%20like%20to%20get%20the%2030-Day%20Social%20Media%20Content%20Pack%20(%C2%A330)." target="_blank" class="btn-card">Order via WhatsApp</a>
+      <div class="stat-card">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Active Support Channels</div>
       </div>
     </div>
+  </section>
 
-    <!-- 4. QR Menu -->
-    <div class="service-card">
-      <div>
-        <h3 class="service-title">Smart QR Digital Menu</h3>
-        <p class="service-desc">Interactive, contactless digital menu and product showcase designed for instant mobile browsing for hospitality & retail shops.</p>
-      </div>
-      <div>
-        <div class="service-price">£25</div>
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I'd%20like%20to%20order%20the%20Smart%20QR%20Digital%20Menu%20(%C2%A325)." target="_blank" class="btn-card">Order via WhatsApp</a>
-      </div>
+  <!-- Visual Showcases & Examples -->
+  <section class="showcase-section">
+    <div class="section-title">
+      <h2>Engineered Solutions in Action</h2>
+      <p>Explore real-world examples of our core deployment capabilities.</p>
     </div>
 
-    <!-- 5. Local SEO Audit -->
-    <div class="service-card">
-      <div>
-        <h3 class="service-title">Local SEO & Presence Audit</h3>
-        <p class="service-desc">In-depth visibility analysis, Google Map profile optimisation, and search keyword strategy to outrank local competitors.</p>
+    <div class="showcase-grid">
+      
+      <!-- Example 1 -->
+      <div class="showcase-card">
+        <div class="showcase-img">💻</div>
+        <div class="showcase-body">
+          <div>
+            <h3 class="showcase-title">High-Converting One-Page Web Systems</h3>
+            <p class="showcase-desc">Mobile-optimised landing architecture featuring direct WhatsApp lead integration, instant quote requests, and local SEO foundation.</p>
+          </div>
+          <a href="services.html" class="btn-secondary-lg" style="text-align: center; display: block;">Learn More (£30)</a>
+        </div>
       </div>
-      <div>
-        <div class="service-price">£20</div>
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I'd%20like%20to%20request%20the%20Local%20SEO%20%26%20Maps%20Audit%20(%C2%A320)." target="_blank" class="btn-card">Order via WhatsApp</a>
+
+      <!-- Example 2 -->
+      <div class="showcase-card">
+        <div class="showcase-img">🤖</div>
+        <div class="showcase-body">
+          <div>
+            <h3 class="showcase-title">Autonomous 24/7 WhatsApp Qualification Bots</h3>
+            <p class="showcase-desc">Custom-built conversational flows that qualify client requirements, calculate estimates, generate PDFs, and confirm appointments automatically.</p>
+          </div>
+          <a href="services.html" class="btn-secondary-lg" style="text-align: center; display: block;">Learn More (£45)</a>
+        </div>
       </div>
+
+      <!-- Example 3 -->
+      <div class="showcase-card">
+        <div class="showcase-img">📱</div>
+        <div class="showcase-body">
+          <div>
+            <h3 class="showcase-title">Contactless Smart QR Menus & Catalogues</h3>
+            <p class="showcase-desc">Frictionless digital menus designed for instant mobile browsing with zero app installs required for hospitality & service venues.</p>
+          </div>
+          <a href="services.html" class="btn-secondary-lg" style="text-align: center; display: block;">Learn More (£25)</a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <!-- 6. Reviews Response Kit -->
-    <div class="service-card">
-      <div>
-        <h3 class="service-title">Google Reviews Response Kit</h3>
-        <p class="service-desc">Custom reputation toolkit with professional response formulas for positive and critical reviews plus review-collector templates.</p>
-      </div>
-      <div>
-        <div class="service-price">£15</div>
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I'd%20like%20to%20get%20the%20Google%20Reviews%20Response%20Kit%20(%C2%A315)." target="_blank" class="btn-card">Order via WhatsApp</a>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- Instant Direct Channels & QR Codes Section -->
-  <section id="direct-connect" class="direct-connect-section">
-    <h2>Instant Direct Consultation</h2>
-    <p>Scan with your mobile camera or click below to start a live consultation channel with Kam Tyler.</p>
+  <!-- Contact Us Section -->
+  <section id="contact-us" class="contact-section">
+    <h2>Connect With Our Team</h2>
+    <p>Scan with your mobile or click below to speak directly with our consultation system or reach out via official email.</p>
 
     <div class="channels-wrapper">
       
       <!-- WhatsApp Card -->
       <div class="channel-box">
         <div class="channel-title" style="color: var(--accent-green);">
-          <span>💬</span> WhatsApp Direct
+          💬 WhatsApp Channel
         </div>
-        
         <div class="qr-frame">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fwa.me%2F447584754377%3Ftext%3DHi%2520Kam%2C%2520I%2520am%2520interested%2520in%2520Gear%2520Radar%2520Digital%2520Solutions" 
-               alt="WhatsApp Direct QR Code" />
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F447584754377%3Ftext%3DHi%2520Kam%2C%2520I%2520am%2520interested%2520in%2520Gear%2520Radar%2520Digital%2520Solutions" alt="WhatsApp Direct QR Code" />
         </div>
-
-        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I%20am%20interested%20in%20Gear%20Radar%20Digital%20Solutions" 
-           target="_blank" 
-           class="btn-channel btn-whatsapp">
+        <a href="https://wa.me/447584754377?text=Hi%20Kam,%20I%20am%20interested%20in%20Gear%20Radar%20Digital%20Solutions" target="_blank" class="btn-channel btn-whatsapp">
           Open in WhatsApp
         </a>
       </div>
@@ -424,17 +502,12 @@
       <!-- Telegram Card -->
       <div class="channel-box">
         <div class="channel-title" style="color: var(--accent);">
-          <span>✈️</span> Telegram Channel
+          ✈️ Telegram Channel
         </div>
-        
         <div class="qr-frame">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Ft.me%2FGearRadarAlerts_bot" 
-               alt="Telegram Channel QR Code" />
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Ft.me%2FGearRadarAlerts_bot" alt="Telegram Channel QR Code" />
         </div>
-
-        <a href="https://t.me/GearRadarAlerts_bot" 
-           target="_blank" 
-           class="btn-channel btn-telegram">
+        <a href="https://t.me/GearRadarAlerts_bot" target="_blank" class="btn-channel btn-telegram">
           Open in Telegram
         </a>
       </div>
@@ -445,7 +518,7 @@
   <!-- Footer -->
   <footer>
     <p>© 2026 Gear Radar Digital Solutions • Managed by Kam Tyler • United Kingdom</p>
-    <p style="margin-top: 8px;">Official Inquiries: <a href="mailto:kam@gearradar.co.uk">kam@gearradar.co.uk</a></p>
+    <p style="margin-top: 8px;">Direct Official Contact: <a href="mailto:kam@gearradar.co.uk">kam@gearradar.co.uk</a></p>
   </footer>
 
 </body>
