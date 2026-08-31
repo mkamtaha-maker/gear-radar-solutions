@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services & Fixed Pricing | Gear Radar Digital Solutions</title>
   
-  <meta name="description" content="Transparent, fixed-price digital solutions, rapid web launches, AI booking bots, and local growth systems worldwide by Kam Tyler." />
+  <meta name="description" content="Transparent, fixed-price digital solutions, rapid web launches, and local growth systems worldwide by Gear Radar." />
   <meta property="og:title" content="Gear Radar Digital Solutions | Services & Pricing" />
-  <meta property="og:description" content="Transparent fixed rates for modern digital setups and autonomous workflows." />
+  <meta property="og:description" content="Transparent fixed rates for modern digital setups and bespoke workflows." />
   <meta property="og:url" content="https://gearradar.co.uk/services.html" />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -18,8 +19,8 @@
     :root {
       --bg-dark: #070a12;
       --bg-surface: #0e1526;
-      --card-bg: rgba(16, 24, 44, 0.7);
-      --card-border: rgba(56, 189, 248, 0.15);
+      --card-bg: rgba(16, 24, 44, 0.75);
+      --card-border: rgba(56, 189, 248, 0.18);
       --card-border-hover: rgba(56, 189, 248, 0.5);
       --primary: #0284c7;
       --primary-hover: #0ea5e9;
@@ -40,7 +41,7 @@
       line-height: 1.6;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.2) 0%, transparent 60%),
         radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.05) 0%, transparent 50%),
         linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
@@ -61,13 +62,13 @@
       border-radius: 16px;
     }
 
-    /* Header */
+    /* Header Navigation */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(16px);
-      background: rgba(7, 10, 18, 0.85);
+      background: rgba(7, 10, 18, 0.88);
       border-bottom: 1px solid var(--card-border);
     }
 
@@ -75,43 +76,43 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
+      padding: 14px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
       color: #fff;
     }
 
-    /* Static Brand Logo */
-    .brand-logo-img {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--accent);
-      box-shadow: 0 0 12px rgba(0, 240, 255, 0.35);
-      background: #0b1329;
+    .brand-svg-logo {
+      width: 46px;
+      height: 46px;
+      filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.5));
+      transition: transform 0.3s ease;
+    }
+
+    .brand:hover .brand-svg-logo {
+      transform: scale(1.05);
     }
 
     .brand-text {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
 
     .brand-text span {
       color: var(--accent-cyan);
-      text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+      text-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      gap: 28px;
     }
 
     .nav-links a {
@@ -135,17 +136,17 @@
     .btn-header {
       background: linear-gradient(135deg, var(--primary), var(--primary-hover));
       color: #fff;
-      padding: 8px 18px;
+      padding: 9px 20px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.88rem;
-      box-shadow: 0 0 12px rgba(2, 132, 199, 0.4);
+      box-shadow: 0 0 14px rgba(2, 132, 199, 0.4);
       transition: all 0.2s;
     }
 
     .btn-header:hover {
-      box-shadow: 0 0 18px rgba(0, 240, 255, 0.6);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
       transform: translateY(-1px);
     }
 
@@ -172,13 +173,13 @@
       margin: 0 auto;
     }
 
-    /* Currency Selector */
+    /* Currency Picker */
     .currency-picker {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 12px;
-      margin: 25px 0 40px;
+      margin: 25px 0 45px;
       flex-wrap: wrap;
     }
 
@@ -374,44 +375,64 @@
 
     footer {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 40px 0 20px;
+      padding: 40px 0 25px;
       text-align: center;
       color: var(--text-muted);
       font-size: 0.88rem;
-      margin-top: 60px;
+      margin-top: 70px;
     }
 
     footer a { color: var(--accent-cyan); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-wrapper { flex-direction: column; gap: 14px; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header Navigation -->
   <header>
     <div class="container nav-wrapper">
       <a href="index.html" class="brand">
-        <img src="watermarked_img_3959612230320203607.jpg" alt="Gear Radar Logo" class="brand-logo-img" />
+        <!-- Pure Inline Vector SVG Logo -->
+        <svg class="brand-svg-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="44" stroke="url(#gear_radar_grad)" stroke-width="4" stroke-dasharray="10 4"/>
+          <path d="M50 8V18M50 82V92M8 50H18M82 50H92M20.3 20.3L27.4 27.4M72.6 72.6L79.7 79.7M20.3 79.7L27.4 72.6M72.6 27.4L79.7 20.3" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="50" cy="50" r="28" stroke="#0284c7" stroke-width="3"/>
+          <circle cx="50" cy="50" r="16" stroke="#38bdf8" stroke-width="2" stroke-dasharray="5 3"/>
+          <circle cx="50" cy="50" r="6" fill="#00f0ff"/>
+          <line x1="50" y1="50" x2="70" y2="30" stroke="#00f0ff" stroke-width="3.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="gear_radar_grad" x1="0" y1="0" x2="100" y2="100">
+              <stop offset="0%" stop-color="#00f0ff"/>
+              <stop offset="100%" stop-color="#0284c7"/>
+            </linearGradient>
+          </defs>
+        </svg>
         <span class="brand-text">GEAR <span>RADAR</span></span>
       </a>
 
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="services.html" class="active">Services & Pricing</a>
-        <a href="index.html#architecture">AI Systems</a>
         <a href="index.html#contact">Contact</a>
       </div>
 
       <div class="header-actions">
-        <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I%20would%20like%20to%20order%20a%20service" class="btn-header">Order via WhatsApp</a>
+        <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I%20would%20like%20to%20order%20a%20service" class="btn-header">Order via WhatsApp</a>
       </div>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="container">
     <div class="page-head">
       <h1>Transparent Fixed Solutions</h1>
-      <p>Instant-deployment services with clear, upfront pricing. No contracts, monthly retainers, or hidden fees[cite: 58].</p>
+      <p>Instant-deployment services with clear, upfront pricing. No contracts, monthly retainers, or hidden fees.</p>
     </div>
 
+    <!-- Currency Picker -->
     <div class="currency-picker">
       <label for="currencySelect">Select Your Region / Currency:</label>
       <select id="currencySelect" class="currency-select" onchange="updateCurrency(this.value)">
@@ -426,108 +447,116 @@
       </select>
     </div>
 
+    <!-- Services Grid -->
     <div class="services-grid">
+      <!-- Service 1 -->
       <div class="glass-panel service-card">
         <span class="service-badge">Core Launch</span>
         <div>
           <div class="service-icon">💻</div>
           <h3 class="service-name">One-Page Web Presence</h3>
-          <p class="service-desc">Lightning-fast, mobile-first single page landing architecture with direct WhatsApp lead capture, local SEO setup, and cloud hosting[cite: 4].</p>
+          <p class="service-desc">Lightning-fast, mobile-first single page landing architecture with direct WhatsApp lead capture, local SEO setup, and cloud hosting.</p>
         </div>
         <div>
           <div class="service-pricing-row">
             <span class="price-value" id="price-web">£30</span>
             <span class="price-turnaround">24-48h Delivery</span>
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'd%20like%20to%20order%20the%20One-Page%20Web%20Presence%20package." target="_blank" class="btn-card">Order via WhatsApp →</a>
+          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'd%20like%20to%20order%20the%20One-Page%20Web%20Presence%20package." target="_blank" class="btn-card">Order via WhatsApp →</a>
         </div>
       </div>
 
+      <!-- Service 2 -->
       <div class="glass-panel service-card">
-        <span class="service-badge">AI Automation</span>
+        <span class="service-badge">Fast Lead Engine</span>
         <div>
-          <div class="service-icon">🤖</div>
-          <h3 class="service-name">WhatsApp Booking Bot</h3>
-          <p class="service-desc">Custom interactive conversation bot tailored to your business to qualify customers, calculate instant estimates, and confirm bookings 24/7[cite: 54].</p>
+          <div class="service-icon">📱</div>
+          <h3 class="service-name">WhatsApp Direct Booking Setup</h3>
+          <p class="service-desc">Streamlined customer inquiry system tailored to your business to qualify customers, calculate estimates, and confirm bookings directly.</p>
         </div>
         <div>
           <div class="service-pricing-row">
             <span class="price-value" id="price-bot">£45</span>
             <span class="price-turnaround">One-Time Setup</span>
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'm%20interested%20in%20the%20WhatsApp%20Booking%20Bot." target="_blank" class="btn-card">Order via WhatsApp →</a>
+          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'm%20interested%20in%20the%20WhatsApp%20Booking%20Setup." target="_blank" class="btn-card">Order via WhatsApp →</a>
         </div>
       </div>
 
+      <!-- Service 3 -->
       <div class="glass-panel service-card">
         <span class="service-badge">Content Kit</span>
         <div>
           <div class="service-icon">📅</div>
           <h3 class="service-name">30-Day Social Content Pack</h3>
-          <p class="service-desc">Full 30-day ready-to-post monthly content calendar complete with high-conversion hooks, British English copy, and target hashtags[cite: 34].</p>
+          <p class="service-desc">Full 30-day ready-to-post monthly content calendar complete with high-conversion hooks, British English copy, and target hashtags.</p>
         </div>
         <div>
           <div class="service-pricing-row">
             <span class="price-value" id="price-social">£30</span>
             <span class="price-turnaround">Instant Delivery</span>
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'd%20like%20to%20order%20the%2030-Day%20Social%20Content%20Pack." target="_blank" class="btn-card">Order via WhatsApp →</a>
+          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'd%20like%20to%20order%20the%2030-Day%20Social%20Content%20Pack." target="_blank" class="btn-card">Order via WhatsApp →</a>
         </div>
       </div>
 
+      <!-- Service 4 -->
       <div class="glass-panel service-card">
         <span class="service-badge">Smart Contactless</span>
         <div>
-          <div class="service-icon">📱</div>
+          <div class="service-icon">📲</div>
           <h3 class="service-name">Smart QR Menu & Catalogue</h3>
-          <p class="service-desc">Interactive mobile-friendly digital menu or catalog with high-resolution printable QR codes for tables, counters, or cards[cite: 10].</p>
+          <p class="service-desc">Interactive mobile-friendly digital menu or catalog with high-resolution printable QR codes for tables, counters, or cards.</p>
         </div>
         <div>
           <div class="service-pricing-row">
             <span class="price-value" id="price-qr">£25</span>
             <span class="price-turnaround">Print-Ready</span>
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'd%20like%20to%20order%20the%20Smart%20QR%20Menu." target="_blank" class="btn-card">Order via WhatsApp →</a>
+          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'd%20like%20to%20order%20the%20Smart%20QR%20Menu." target="_blank" class="btn-card">Order via WhatsApp →</a>
         </div>
       </div>
 
+      <!-- Service 5 -->
       <div class="glass-panel service-card">
         <span class="service-badge">Search Growth</span>
         <div>
           <div class="service-icon">🔍</div>
           <h3 class="service-name">SEO & Digital Health Audit</h3>
-          <p class="service-desc">Comprehensive executive audit detailing page speed, local search bottlenecks, missing keywords, and an actionable fix list[cite: 24].</p>
+          <p class="service-desc">Comprehensive executive audit detailing page speed, local search bottlenecks, missing keywords, and an actionable fix list.</p>
         </div>
         <div>
           <div class="service-pricing-row">
             <span class="price-value" id="price-seo">£20</span>
             <span class="price-turnaround">PDF Report</span>
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'd%20like%20to%20request%20the%20SEO%20%26%20Digital%20Audit." target="_blank" class="btn-card">Order via WhatsApp →</a>
+          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'd%20like%20to%20request%20the%20SEO%20%26%20Digital%20Audit." target="_blank" class="btn-card">Order via WhatsApp →</a>
         </div>
       </div>
 
+      <!-- Service 6 -->
       <div class="glass-panel service-card">
         <span class="service-badge">Reputation</span>
         <div>
           <div class="service-icon">⭐</div>
           <h3 class="service-name">Google Reviews Response Kit</h3>
-          <p class="service-desc">Strategic AI response templates optimised for Google Maps ranking, handling 5-star praise, neutral reviews, and dispute resolutions[cite: 44].</p>
+          <p class="service-desc">Strategic expert response templates optimised for Google Maps ranking, handling 5-star praise, neutral reviews, and dispute resolutions.</p>
         </div>
         <div>
           <div class="service-pricing-row">
             <span class="price-value" id="price-reviews">£15</span>
             <span class="price-turnaround">Turnkey Guide</span>
           </div>
-          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'd%20like%20to%20get%20the%20Google%20Reviews%20Response%20Kit." target="_blank" class="btn-card">Order via WhatsApp →</a>
+          <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'd%20like%20to%20get%20the%20Google%20Reviews%20Response%20Kit." target="_blank" class="btn-card">Order via WhatsApp →</a>
         </div>
       </div>
     </div>
 
+    <!-- Bundle Offer -->
     <div class="bundle-banner">
       <div class="bundle-content">
         <h3>⚡ Local Business Starter Bundle</h3>
-        <p>Get the complete digital foundation package at a bundled discount: One-Page Website + Smart QR Menu + 30-Day Social Media Content Pack[cite: 61, 62].</p>
+        <p>Get the complete digital foundation package at a bundled discount: One-Page Website + Smart QR Menu + 30-Day Social Media Content Pack.</p>
         <div class="bundle-features">
           <span class="feature-tag">✓ Web Presence</span>
           <span class="feature-tag">✓ Smart QR System</span>
@@ -538,15 +567,16 @@
       <div class="bundle-price-box">
         <div class="price-old" id="bundle-old">£85</div>
         <div class="price-current" id="bundle-price">£65</div>
-        <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I'd%20like%20to%20order%20the%20Local%20Business%20Starter%20Bundle." target="_blank" class="btn-primary">Claim Bundle →</a>
+        <a href="https://wa.me/447442309417?text=Hi%20Gear%20Radar%20Team,%20I'd%20like%20to%20order%20the%20Local%20Business%20Starter%20Bundle." target="_blank" class="btn-primary">Claim Bundle →</a>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2026 Gear Radar Digital Solutions • Managed by <b>Kam Tyler</b> • Greater Manchester, UK [cite: 72, 74, 77]</p>
-      <p style="margin-top: 8px;">Inquiries: <a href="mailto:gearradarservices@gmail.com">gearradarservices@gmail.com</a> [cite: 75]</p>
+      <p>© 2026 Gear Radar Digital Solutions • Greater Manchester, UK</p>
+      <p style="margin-top: 8px;">Direct Inquiries: <a href="mailto:info@gearradar.co.uk">info@gearradar.co.uk</a></p>
     </div>
   </footer>
 
