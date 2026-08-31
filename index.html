@@ -360,4 +360,187 @@
       margin-bottom: 14px;
     }
 
-    .qr-frame
+    .qr-frame {
+      background: #ffffff;
+      padding: 8px;
+      border-radius: 10px;
+      margin-bottom: 18px;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-frame img {
+      width: 134px;
+      height: 134px;
+      display: block;
+    }
+
+    .btn-channel {
+      width: 100%;
+      padding: 12px 0;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .btn-channel:hover { opacity: 0.9; }
+    .btn-whatsapp { background: var(--accent-green); }
+    .btn-telegram { background: var(--primary); }
+    .btn-email { background: var(--accent-amber); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 40px 0 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-top: 60px;
+    }
+
+    footer a { color: var(--accent-cyan); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .nav-wrapper { flex-direction: column; gap: 14px; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">
+        <img src="watermarked_img_3959612230320203607.jpg" alt="Gear Radar Logo" class="brand-logo-img" />
+        <span class="brand-text">GEAR <span>RADAR</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services & Pricing</a>
+        <a href="#architecture">AI Systems</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="header-actions">
+        <div class="status-badge">
+          <span class="status-dot"></span> 24/7 ACTIVE
+        </div>
+        <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I%20would%20like%20to%20inquire%20about%20Gear%20Radar%20Services" class="btn-header">Instant Chat</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">⚡ Autonomous Growth Architecture</div>
+      <h1>Engineering Autonomous Digital Presence & Growth</h1>
+      <p>Gear Radar Digital Solutions designs instant-launch web storefronts, 24/7 WhatsApp qualification bots, and automated local visibility engines for modern businesses worldwide.</p>
+      
+      <div class="hero-buttons">
+        <a href="services.html" class="btn-primary">View Fixed Services & Pricing →</a>
+        <a href="#contact" class="btn-secondary">Instant Consultation</a>
+      </div>
+    </section>
+
+    <div class="stats-bar">
+      <div class="glass-panel stat-item">
+        <div class="stat-val">24-48h</div>
+        <div class="stat-lbl">Rapid Deployment</div>
+      </div>
+      <div class="glass-panel stat-item">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">Autonomous Flow</div>
+      </div>
+      <div class="glass-panel stat-item">
+        <div class="stat-val">8+</div>
+        <div class="stat-lbl">Global Currencies</div>
+      </div>
+      <div class="glass-panel stat-item">
+        <div class="stat-val">24/7</div>
+        <div class="stat-lbl">Active Agents</div>
+      </div>
+    </div>
+
+    <section id="architecture">
+      <div class="section-head">
+        <h2>Powered by Autonomous AI Agent Architecture</h2>
+        <p>Our operational backend runs on specialized AI agents orchestrated for instantaneous execution.</p>
+      </div>
+
+      <div class="agents-grid">
+        <div class="glass-panel agent-card">
+          <div class="agent-role">System Orchestrator</div>
+          <h4 class="agent-name">Master Supervisor Agent</h4>
+          <p class="agent-desc">Routes real-time tasks, prioritizes urgent client inquiries, and oversees end-to-end task automation via LangGraph pipelines[cite: 79, 80, 83, 84, 86].</p>
+        </div>
+
+        <div class="glass-panel agent-card">
+          <div class="agent-role">Target Hunter</div>
+          <h4 class="agent-name">Lead Generation Agent</h4>
+          <p class="agent-desc">Scans markets and identifies commercial prospects requiring digital modernization, evaluating lead readiness automatically[cite: 88, 89, 91, 93].</p>
+        </div>
+
+        <div class="glass-panel agent-card">
+          <div class="agent-role">Omnichannel Desk</div>
+          <h4 class="agent-name">Communications Hub</h4>
+          <p class="agent-desc">24/7 handling across WhatsApp Cloud API, Telegram, and official Mail agents powered by Gemini reasoning engines[cite: 95, 96, 99, 105, 111].</p>
+        </div>
+
+        <div class="glass-panel agent-card">
+          <div class="agent-role">Ledger & Invoicing</div>
+          <h4 class="agent-name">Finance & Billing Agent</h4>
+          <p class="agent-desc">Instant payment link generation (PayPal/Stripe), webhook settlement verifications, and automated client receipts[cite: 112, 117, 119, 120, 132].</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-head">
+        <h2>Direct Connect & Instant Consultation</h2>
+        <p>Connect directly with Kam Tyler across your preferred channel[cite: 71, 72].</p>
+      </div>
+
+      <div class="channels-wrapper">
+        <div class="channel-box">
+          <div class="channel-title" style="color: var(--accent-green);">💬 WhatsApp Direct</div>
+          <div class="qr-frame">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F447442309417%3Ftext%3DHi%2520Kam%2C%2520I%2520am%2520interested%2520in%2520Gear%2520Radar%2520Digital%2520Solutions" alt="WhatsApp QR Code" />
+          </div>
+          <a href="https://wa.me/447442309417?text=Hi%20Kam,%20I%20am%20interested%20in%20Gear%20Radar%20Digital%20Solutions" target="_blank" class="btn-channel btn-whatsapp">Open WhatsApp (+44 7442 309417)</a>
+        </div>
+
+        <div class="channel-box">
+          <div class="channel-title" style="color: var(--accent-cyan);">✈️ Telegram Bot</div>
+          <div class="qr-frame">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Ft.me%2FGearRadarAlerts_bot" alt="Telegram QR Code" />
+          </div>
+          <a href="https://t.me/GearRadarAlerts_bot" target="_blank" class="btn-channel btn-telegram">Open Telegram Bot</a>
+        </div>
+
+        <div class="channel-box">
+          <div class="channel-title" style="color: var(--accent-amber);">✉️ Official Email</div>
+          <div class="qr-frame">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=mailto%3Agearradarservices%40gmail.com%3Fsubject%3DBusiness%2520Inquiry%2520-%2520Gear%2520Radar" alt="Email QR Code" />
+          </div>
+          <a href="mailto:gearradarservices@gmail.com" class="btn-channel btn-email">gearradarservices@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Gear Radar Digital Solutions • Managed by <b>Kam Tyler</b> • Greater Manchester, UK [cite: 72, 74, 77]</p>
+      <p style="margin-top: 8px;">Cloud Infrastructure: Google Cloud • Inquiries: <a href="mailto:gearradarservices@gmail.com">gearradarservices@gmail.com</a> [cite: 75, 149]</p>
+    </div>
+  </footer>
+
+</body>
+</html>
